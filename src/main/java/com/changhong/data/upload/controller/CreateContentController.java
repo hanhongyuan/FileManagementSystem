@@ -1,4 +1,4 @@
-package com.changhong.data.upload.CONTROLLER;
+package com.changhong.data.upload.controller;
 
 import org.springframework.stereotype.Controller;
 

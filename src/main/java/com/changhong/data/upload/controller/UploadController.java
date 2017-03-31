@@ -1,4 +1,4 @@
-package com.changhong.data.upload.CONTROLLER;
+package com.changhong.data.upload.controller;
 
 import com.changhong.data.upload.entity.SingleuploadResponse;
 import com.changhong.data.upload.service.QueryStringAnalysisService;

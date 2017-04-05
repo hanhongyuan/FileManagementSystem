@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="FileManagementSystem" />
         <module name="uploadTest" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="FileManagementSystem" target="1.6" />
       <module name="uploadTest" target="1.6" />
     </bytecodeTargetLevel>
   </component>

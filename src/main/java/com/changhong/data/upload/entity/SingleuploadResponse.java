@@ -6,17 +6,9 @@ package com.changhong.data.upload.entity;
 public class SingleuploadResponse {
     private String path;
     private String size;
-    private String uuid;
+    private String md5;
     private String ctime;
     private String code;
-
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
-    }
 
     public String getPath() {
         return path;
@@ -34,12 +26,12 @@ public class SingleuploadResponse {
         this.size = size;
     }
 
-    public String getUuid() {
-        return uuid;
+    public String getMd5() {
+        return md5;
     }
 
-    public void setUuid(String uuid) {
-        this.uuid = uuid;
+    public void setMd5(String md5) {
+        this.md5 = md5;
     }
 
     public String getCtime() {
@@ -50,12 +42,20 @@ public class SingleuploadResponse {
         this.ctime = ctime;
     }
 
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
     @Override
     public String toString() {
         return "SingleuploadResponse{" +
                 "path='" + path + '\'' +
                 ", size='" + size + '\'' +
-                ", uuid='" + uuid + '\'' +
+                ", md5='" + md5 + '\'' +
                 ", ctime='" + ctime + '\'' +
                 ", code='" + code + '\'' +
                 '}';

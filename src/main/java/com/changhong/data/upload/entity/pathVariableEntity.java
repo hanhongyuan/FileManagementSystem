@@ -3,7 +3,7 @@ package com.changhong.data.upload.entity;
 /**
  * Created by lenovo on 2017/3/30.
  */
-public class PathVariableEntity {
+public class pathVariableEntity {
     private String method;
     private String user;
     private String path;

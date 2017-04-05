@@ -46,7 +46,29 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
-
+        <!-- https://mvnrepository.com/artifact/com.ceph/rados -->
+        <dependency>
+            <groupId>com.ceph</groupId>
+            <artifactId>rados</artifactId>
+            <version>0.3.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.github.twonote/radosgw-admin4j -->
+        <dependency>
+            <groupId>io.github.twonote</groupId>
+            <artifactId>radosgw-admin4j</artifactId>
+            <version>0.0.4</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.ceph/libcephfs -->
+        <dependency>
+            <groupId>com.ceph</groupId>
+            <artifactId>libcephfs</artifactId>
+            <version>0.80.5</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk -->
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk</artifactId>
+            <version>1.11.109</version>
+        </dependency>
     </dependencies>
-
 </project>

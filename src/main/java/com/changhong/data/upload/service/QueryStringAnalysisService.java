@@ -4,6 +4,7 @@ import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
+import java.net.URLDecoder;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,8 +15,12 @@ import java.util.Map;
 public class QueryStringAnalysisService {
     public Map<String,String> analysis(HttpServletRequest request){
         HttpRequest reques=null;
-        String query=request.getQueryString();
-        Map<String,String> params=new HashMap<String, String>();
+        String query= null;
+            query = URLDecoder.decode(request.getQueryString());
+
+
+        System.out.print(query);
+        Map<String,String> params =new HashMap<String, String>();
         if(query==null){
             throw new RuntimeException("Query String Can Not Be Empty");
         }else{

@@ -37,6 +37,8 @@ public class BatchUploadController {
     public batchUploadResponse batchUpload(HttpServletRequest request) throws IOException {
         Map<String,String> params=new HashMap<String, String>();
         List<MultipartFile> files = ((MultipartHttpServletRequest) request).getFiles("file");
+        String set="set global max_allowed_packet = 2*1024*1024*1024*1024*10";
+        jdbcTemplate.execute(set);
         String sql="insert into uploadfiles(filename,path,user,method,ctime,data) values(?,?,?,?,?,?)";
         SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Date date=new Date(System.currentTimeMillis());

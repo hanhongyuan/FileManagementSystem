@@ -30,7 +30,7 @@ public class CephStorageService {
         ClientConfiguration clientConfig = new ClientConfiguration();
         clientConfig.setProtocol(Protocol.HTTP);
         amazonS3=new AmazonS3Client(credentials,clientConfig);
-        amazonS3.setEndpoint("");//This creates a connection so that you can interact with the server.
+        amazonS3.setEndpoint("192.168.1.248:7248");//This creates a connection so that you can interact with the server.
     }
 
     /**
@@ -88,7 +88,7 @@ public class CephStorageService {
     }
 
     /**
-     * 数据的存储
+     * 单条数据的存储
      * @param path
      * @param data
      * @return

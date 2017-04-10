@@ -17,9 +17,7 @@ public class QueryStringAnalysisService {
         HttpRequest reques=null;
         String query= null;
             query = URLDecoder.decode(request.getQueryString());
-
-
-        System.out.print(query);
+        System.out.print("接受到的queryString："+query);
         Map<String,String> params =new HashMap<String, String>();
         if(query==null){
             throw new RuntimeException("Query String Can Not Be Empty");
@@ -29,11 +27,11 @@ public class QueryStringAnalysisService {
                 for (int i = 0; i < querys.length; i++) {
                     String[] string = querys[i].split("=");
                     params.put(string[string.length - 2], string[string.length - 1]);
-                    System.out.println("querys:" + querys[i]);
+                    System.out.println("拆分的querys:" + querys[i]);
                 }
-                System.out.println(params.get("method"));
-                System.out.println(params.get("user"));
-                System.out.println(params.get("path"));
+                System.out.println("方式："+params.get("method"));
+                System.out.println("用户："+params.get("user"));
+                System.out.println("存储路径："+params.get("path"));
             }catch(ArrayIndexOutOfBoundsException e){
                 throw new RuntimeException("query String format exception");
             }
